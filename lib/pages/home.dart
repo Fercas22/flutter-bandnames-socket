@@ -195,34 +195,30 @@ class _HomePageState extends State<HomePage> {
       Colors.lime
     ];
 
-    return Container(
-        color: null,
-        width: double.infinity,
-        height: 200,
-        child: PieChart(
-          dataMap: dataMap,
-          animationDuration: const Duration(seconds: 2),
-          chartLegendSpacing: 10,
-          chartRadius: size.width / 2.5,
-          colorList: colorList,
-          initialAngleInDegree: 0,
-          chartType: ChartType.disc,
-          legendOptions: const LegendOptions(
-            showLegendsInRow: false,
-            legendPosition: LegendPosition.right,
-            showLegends: true,
-            legendShape: BoxShape.circle,
-            legendTextStyle: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          chartValuesOptions: const ChartValuesOptions(
-            showChartValueBackground: false,
-            showChartValues: true,
-            showChartValuesInPercentage: true,
-            showChartValuesOutside: false,
-            decimalPlaces: 0,
-          ),
-        ));
+    return PieChart(
+      dataMap: dataMap,
+      animationDuration: const Duration(seconds: 2),
+      chartLegendSpacing: 10,
+      chartRadius: size.width / 2.5,
+      colorList: colorList,
+      initialAngleInDegree: 0,
+      chartType: ChartType.disc,
+      legendOptions: const LegendOptions(
+        showLegendsInRow: false,
+        legendPosition: LegendPosition.right,
+        showLegends: true,
+        legendShape: BoxShape.circle,
+        legendTextStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      chartValuesOptions: const ChartValuesOptions(
+        showChartValueBackground: false,
+        showChartValues: true,
+        showChartValuesInPercentage: true,
+        showChartValuesOutside: false,
+        decimalPlaces: 0,
+      ),
+    );
   }
 }
